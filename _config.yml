@@ -1,21 +1,29 @@
-# Welcome to Jekyll!
+title: Book
+description: A simple Jekyll theme
+url: # site url
+avatar: # path/to/avatar for index page. e.g. /assets/img/avatar.jpg
+favicon: # path/to/favicon for site. e.g. /assets/img/favicon.ico
+google_analytics: # google analytics id
+disqus_shortname: # disqus_shortname for disqus comment system
+
+# Content for about page.
+# Each paragraph will be a <p> tag which is inserted to about
+# page. text_align is used to align the text. Default is left.
+# Other two values are center and right. If there are some links
+# in your paragraph, use '?link?' to take the place of a link.
+# And then write the real link under links. name is the link
+# text. url is the link. when external is set as true, then
+# a new whidow will be open when link is clicked.
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+about:
+  - paragraph: ?link?, a simple Jekyll theme. Built by ?link?
+    text_align: center
+    links:
+      - name: Book
+        url: https://github.com/kkninjae/book
+        external: true
+      - name: Lang Liu
+        url: http://kkninjae.com/about/
+        external: false
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-markdown: kramdown
+    
