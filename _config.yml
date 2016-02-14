@@ -10,8 +10,8 @@ title: impunation
 email: ajdamico@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   how to impute a synthetic nationwide population: a universal and comprehensive prediction model
-baseurl: # "" # the subpath of your site, e.g. /blog
-url: # "http://impunation.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://impunation.com" # the base hostname & protocol for your site
 twitter_username: # jekyllrb
 github_username:  # jekyll
 
