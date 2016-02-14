@@ -21,4 +21,4 @@ tables with one record per..
 * library
 * hospital
 * prison
-* institution
+* institutions (such as nursing homes)
