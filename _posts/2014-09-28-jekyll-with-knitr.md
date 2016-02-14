@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Serve Jekyll Websites with servr and knitr"
+title:  "serve jekyll websites with servr and knitr"
 categories: [jekyll, rstats]
 tags: [knitr, servr, httpuv, websocket]
 ---
