@@ -6,8 +6,8 @@
 </description>
     <link>http://impunation.com/</link>
     <atom:link href="http://impunation.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2016 16:43:47 -0500</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2016 16:43:47 -0500</lastBuildDate>
+    <pubDate>Sun, 14 Feb 2016 17:17:17 -0500</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 17:17:17 -0500</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -31,7 +31,9 @@
 
 &lt;p&gt;https://github.com/impunation/rti_coordinates&lt;/p&gt;
 
-&lt;p&gt;http://www.rti.org/pubs/mr-0010-0905-wheaton.pdf&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.rti.org/pubs/mr-0010-0905-wheaton.pdf&quot;&gt;http://www.rti.org/pubs/mr-0010-0905-wheaton.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://synthpopviewer.rti.org/&quot;&gt;http://synthpopviewer.rti.org/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://impunation.com/rti/2016/02/14/rti_coordinates.html</link>
@@ -133,6 +135,22 @@
       </item>
     
       <item>
+        <title>how should locality real estate valuation open data inform nationwide parcels and prices?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/real_estate_integration&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/real%20estate/2016/02/14/real_estate_integration.html</link>
+        <guid isPermaLink="true">http://impunation.com/real%20estate/2016/02/14/real_estate_integration.html</guid>
+        
+        
+        <category>real estate</category>
+        
+      </item>
+    
+      <item>
         <title>what should be assumed about migration within a locality at different points in time?</title>
         <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
 
@@ -163,32 +181,18 @@
       </item>
     
       <item>
-        <title>what is the relationship between ACS 2010 and ACS 2011?</title>
+        <title>how should assumptions be tracked?</title>
         <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
 
-&lt;p&gt;https://github.com/impunation/acs_two_year&lt;/p&gt;
-</description>
-        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
-        <link>http://impunation.com/acs/2016/02/14/acs_two_year.html</link>
-        <guid isPermaLink="true">http://impunation.com/acs/2016/02/14/acs_two_year.html</guid>
-        
-        
-        <category>acs</category>
-        
-      </item>
-    
-      <item>
-        <title>what is the relationship btw census 2010 SF1 and ACS 2010?</title>
-        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+&lt;p&gt;https://github.com/impunation/assumption_tracking&lt;/p&gt;
 
-&lt;p&gt;https://github.com/impunation/acs_sf&lt;/p&gt;
 </description>
         <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
-        <link>http://impunation.com/acs/2016/02/14/acs_sf.html</link>
-        <guid isPermaLink="true">http://impunation.com/acs/2016/02/14/acs_sf.html</guid>
+        <link>http://impunation.com/assumptions/2016/02/14/assumption_tracking.html</link>
+        <guid isPermaLink="true">http://impunation.com/assumptions/2016/02/14/assumption_tracking.html</guid>
         
         
-        <category>acs</category>
+        <category>assumptions</category>
         
       </item>
     
