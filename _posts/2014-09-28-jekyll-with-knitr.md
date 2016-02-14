@@ -1,9 +1,13 @@
 ---
 layout: post
-title:  "serve jekyll websites with servr and knitr"
+title:  "posting rubric and sample code"
 categories: [jekyll, rstats]
 tags: [knitr, servr, httpuv, websocket]
 ---
+
+jekyll and knitr examples from [http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html)
+
+
 
 The R package [**servr**](https://github.com/yihui/servr) can be used to set up an HTTP server to serve files under a directory. Since **servr** v0.2, it has added a function `servr::jekyll()` specifically designed for websites based on Jekyll and R Markdown. The main features of this function are:
 
