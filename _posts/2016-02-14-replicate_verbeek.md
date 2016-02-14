@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "can verbeek pseudo-panel paper be implemented with CPS?"
-categories: [pseudo-panel]
+categories: [panel]
 tags: []
 ---
 

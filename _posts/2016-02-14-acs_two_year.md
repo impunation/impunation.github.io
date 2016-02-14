@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what is the relationship between ACS 2010 and ACS 2011?"
-categories: [acs]
+categories: [panel]
 tags: []
 ---
 

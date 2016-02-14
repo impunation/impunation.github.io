@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what is the relationship btw census 2010 SF1 and NVSS birth data?"
-categories: [birth]
+categories: [vitals]
 tags: []
 ---
 

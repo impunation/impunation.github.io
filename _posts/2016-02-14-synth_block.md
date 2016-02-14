@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what is the most comprehensive way to create a synthetic census block?"
-categories: [synth]
+categories: [imputation]
 tags: []
 ---
 

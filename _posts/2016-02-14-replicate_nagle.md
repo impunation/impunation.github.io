@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "can nagle dasymetric modeling paper be replicated with R?"
-categories: [dasymetric]
+categories: [imputation]
 tags: []
 ---
 

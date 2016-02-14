@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what tables should a comprehensive database contain? "
-categories: [structure]
+categories: [connections]
 tags: []
 ---
 

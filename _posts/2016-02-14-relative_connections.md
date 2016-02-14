@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "how should family relationships be imputed?"
-categories: [family]
+categories: [connections]
 tags: []
 ---
 

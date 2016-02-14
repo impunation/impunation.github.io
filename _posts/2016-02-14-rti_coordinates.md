@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "how much of RTI's coordinate approach should be followed?"
-categories: [rti]
+categories: [lit_review]
 tags: []
 ---
 
