@@ -4,238 +4,191 @@
     <title>impunation</title>
     <description>how to impute a synthetic nationwide population: a universal and comprehensive prediction model
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2016 15:13:42 -0500</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2016 15:13:42 -0500</lastBuildDate>
+    <link>http://impunation.com/</link>
+    <atom:link href="http://impunation.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 14 Feb 2016 16:43:47 -0500</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 16:43:47 -0500</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
-        <title>posting rubric and sample code</title>
-        <description>&lt;p&gt;jekyll and knitr examples from &lt;a href=&quot;http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html&quot;&gt;http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html&lt;/a&gt;&lt;/p&gt;
+        <title>what is the most comprehensive way to create a synthetic census block?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
 
-&lt;p&gt;The R package &lt;a href=&quot;https://github.com/yihui/servr&quot;&gt;&lt;strong&gt;servr&lt;/strong&gt;&lt;/a&gt; can be used to set up an HTTP server to serve files under a directory. Since &lt;strong&gt;servr&lt;/strong&gt; v0.2, it has added a function &lt;code class=&quot;highlighter-rouge&quot;&gt;servr::jekyll()&lt;/code&gt; specifically designed for websites based on Jekyll and R Markdown. The main features of this function are:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;R Markdown source files are re-compiled through &lt;a href=&quot;http://yihui.name/knitr&quot;&gt;&lt;strong&gt;knitr&lt;/strong&gt;&lt;/a&gt; when their corresponding Markdown output files become older&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; than source files;&lt;/li&gt;
-  &lt;li&gt;The web page will refresh itself automatically in the above case as well;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;As a result, all you need to do is write your blog posts (R Markdown documents), and you do not need to worry about re-building the website or calling &lt;strong&gt;knitr&lt;/strong&gt; commands. Whenever you save a blog post in your text editor, the web page will be updated on the fly. This is particularly handy in the &lt;a href=&quot;http://www.rstudio.com&quot;&gt;RStudio IDE&lt;/a&gt;, because after you run &lt;code class=&quot;highlighter-rouge&quot;&gt;servr::jekyll()&lt;/code&gt; in the console, you can start writing or editing your R Markdown posts, and the HTML output, displayed in the RStudio viewer pane, will be in sync with your source post in the source panel (see the screenshot below).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://i.imgur.com/gKVGhiP.png&quot;&gt;&lt;img src=&quot;http://i.imgur.com/gKVGhiP.png&quot; alt=&quot;Jekyll with servr and knitr&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
-
-&lt;p&gt;You must have installed the packages &lt;strong&gt;servr&lt;/strong&gt; (&amp;gt;= 0.2) and &lt;strong&gt;knitr&lt;/strong&gt; (&amp;gt;= 1.8).&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;servr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;knitr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://cran.rstudio.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Of course, you have to install &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; as well. For Windows users, you have to make sure &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; can be found from your environment variable &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, i.e., R can call it via &lt;code class=&quot;highlighter-rouge&quot;&gt;system(&#39;jekyll&#39;)&lt;/code&gt;. This is normally not an issue for Linux or Mac OS X users (&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll&lt;/code&gt; is enough).&lt;/p&gt;
-
-&lt;h2 id=&quot;r-code-chunks&quot;&gt;R code chunks&lt;/h2&gt;
-
-&lt;p&gt;Now we write some R code chunks in this post. For example,&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;digits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello world!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## hello world!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;set.seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;##  [1]  9.44  9.77 11.56 10.07 10.13 11.72 10.46  8.73  9.31  9.55 11.22
-## [12] 10.36 10.40 10.11  9.44 11.79 10.50  8.03 10.70  9.53  8.93  9.78
-## [23]  8.97  9.27  9.37  8.31 10.84 10.15  8.86 11.25 10.43  9.70 10.90
-## [34] 10.88 10.82 10.69 10.55  9.94  9.69  9.62&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# generate a table
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knitr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mtcars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;mpg&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;cyl&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;disp&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;hp&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;drat&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;wt&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;qsec&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;vs&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;am&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;gear&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;carb&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Mazda RX4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;160&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;110&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.62&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Mazda RX4 Wag&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;160&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;110&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.90&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.88&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Datsun 710&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;22.8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;108&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;93&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.85&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.32&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18.6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Hornet 4 Drive&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;21.4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;258&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;110&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.08&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.21&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;19.4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Hornet Sportabout&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18.7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;360&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;175&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.15&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.44&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;17.0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Valiant&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;18.1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;225&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;105&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2.76&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3.46&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;20.2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-        &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# a boring comment
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;formals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## [1] &quot;dir&quot;     &quot;input&quot;   &quot;output&quot;  &quot;script&quot;  &quot;serve&quot;   &quot;command&quot;
-## [7] &quot;...&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Just to test inline R expressions&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; in &lt;strong&gt;knitr&lt;/strong&gt;, we know the first element in &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; (created in the code chunk above) is 9.44. You can certainly draw some graphs as well:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;par&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cars&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;red&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scatterplot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://db.yihui.name/jekyll/2014-09-28-jekyll-with-knitr/cars-1.png&quot; alt=&quot;A scatterplot of the cars data&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-build-script&quot;&gt;The build script&lt;/h2&gt;
-
-&lt;p&gt;Zero-configuration is required for &lt;code class=&quot;highlighter-rouge&quot;&gt;servr::jekyll()&lt;/code&gt; to work on your Jekyll website. However, there is always demand for more control over some options, which can be defined in a custom build script. Here are the arguments of &lt;code class=&quot;highlighter-rouge&quot;&gt;servr::jekyll()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_source&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-    &lt;span class=&quot;s2&quot;&gt;&quot;_posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Makefile&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;build.R&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-    &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;By default, &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll()&lt;/code&gt; looks for &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files under the root directory, the &lt;code class=&quot;highlighter-rouge&quot;&gt;_source&lt;/code&gt; directory, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory of the Jekyll website. For example, if you put your R Markdown posts under &lt;code class=&quot;highlighter-rouge&quot;&gt;_source&lt;/code&gt;, they will be compiled to the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; argument specifies a Makefile or an R script to be used to compile your R Markdown files. If it is a Makefile, &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll()&lt;/code&gt; will run &lt;code class=&quot;highlighter-rouge&quot;&gt;make -q&lt;/code&gt; to see if the site needs to be recompiled, then &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt; if it does. If the script is an R script, say, named &lt;code class=&quot;highlighter-rouge&quot;&gt;build.R&lt;/code&gt;, it is called via command line of the form&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Rscript build.R arg1 arg2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;See &lt;code class=&quot;highlighter-rouge&quot;&gt;?servr::jekyll&lt;/code&gt; for more details. You can define all your &lt;strong&gt;knitr&lt;/strong&gt; options and any other options in this R script. See the script &lt;a href=&quot;https://github.com/yihui/knitr-jekyll/blob/gh-pages/build.R&quot;&gt;build.R&lt;/a&gt; in the knitr-jekyll repository for an example: it will automatically set up the output renderers for &lt;strong&gt;knitr&lt;/strong&gt;, e.g., when the Jekyll Markdown engine is &lt;code class=&quot;highlighter-rouge&quot;&gt;kramdown&lt;/code&gt;, this script will call &lt;code class=&quot;highlighter-rouge&quot;&gt;knitr::render_jekyll()&lt;/code&gt; so that the code chunk output will be put inside the Liquid tag &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endhighlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;; it also sets up some &lt;strong&gt;knitr&lt;/strong&gt; chunk and package options so that figures can be displayed correctly. For those who do not wish to store images in GIT (because normally they are binary files), you may check out how I host my images in Dropbox for this repository (see the code below &lt;code class=&quot;highlighter-rouge&quot;&gt;Sys.getenv(&#39;USER&#39;) == &#39;yihui&#39;&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;on-the-markdown-renderers&quot;&gt;On the Markdown renderers&lt;/h2&gt;
-
-&lt;p&gt;Jekyll supports a number of Markdown renderers, such as kramdown, redcarpet, rdiscount, and so on. At the moment, it is a little annoying that kramdown supports LaTeX math expressions via &lt;code class=&quot;highlighter-rouge&quot;&gt;$$ math $$&lt;/code&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, but does not support syntax highlighting of code blocks using the three backticks syntax (you must write the awkward Liquid tags); on the other hand, redcarpet does not support LaTeX math but does support three backticks. In my opinion, all the different flavors and implementations of Markdown is the biggest problem of Markdown, since there is not an unambiguous spec for Markdown. &lt;a href=&quot;http://commonmark.org&quot;&gt;CommonMark&lt;/a&gt; looks like a promising project to set up a common spec for Markdown, and &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is a great implementation that has brought almost all the features that you may ever need in Markdown. You may find some Pandoc plugins for Jekyll by searching online. However, GitHub Pages does not support arbitrary Jekyll plugins, so you cannot just use a Pandoc plugin there, but that does not mean you cannot use Pandoc locally, nor does it mean you cannot push locally compiled HTML pages to GitHub Pages&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’d love you to &lt;a href=&quot;https://github.com/yihui/knitr-jekyll&quot;&gt;fork&lt;/a&gt; this repository, make some (hopefully minor) changes, and &lt;a href=&quot;https://github.com/yihui/knitr-jekyll/issues&quot;&gt;let me know&lt;/a&gt; your success of using Pandoc with Jekyll. Happy hacking, and good luck!&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Determined by the modification time of files, i.e., &lt;code class=&quot;highlighter-rouge&quot;&gt;file.info(x)[, &#39;mtime&#39;]&lt;/code&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;The syntax in R Markdown for inline expressions is &lt;code class=&quot;highlighter-rouge&quot;&gt;`r code`&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt; is the R expression that you want to evaluate, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;x[1]&lt;/code&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;The reason that we may need to write R Markdown posts in &lt;code class=&quot;highlighter-rouge&quot;&gt;_source&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; is that Jekyll has &lt;a href=&quot;https://github.com/jekyll/jekyll/pull/3147&quot;&gt;a subtle bug&lt;/a&gt; (fixed in v2.5.3): its variable &lt;code class=&quot;highlighter-rouge&quot;&gt;site.posts&lt;/code&gt; will count &lt;code class=&quot;highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; files under &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; as well. The consequence is, if you list all the posts of your website, the post &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/yyyy-mm-dd-foo.md&lt;/code&gt; will show up twice due to the existence of &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/yyyy-mm-dd-foo.Rmd&lt;/code&gt;, therefore I would recommend you to put your R Markdown posts in a separate directory, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;_source&lt;/code&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;Unfortunately, kramdown does not support math expressions in single dollars, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;$ \alpha $&lt;/code&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;If you choose to generate your Jekyll website locally, and push the HTML files to GitHub, you will need the file &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt;&lt;/a&gt; in the root directory of your website. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+&lt;p&gt;https://github.com/impunation/synth_block&lt;/p&gt;
 </description>
-        <pubDate>Sun, 28 Sep 2014 00:00:00 -0500</pubDate>
-        <link>/jekyll/rstats/2014/09/28/jekyll-with-knitr.html</link>
-        <guid isPermaLink="true">/jekyll/rstats/2014/09/28/jekyll-with-knitr.html</guid>
-        
-        <category>knitr</category>
-        
-        <category>servr</category>
-        
-        <category>httpuv</category>
-        
-        <category>websocket</category>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/synth/2016/02/14/synth_block.html</link>
+        <guid isPermaLink="true">http://impunation.com/synth/2016/02/14/synth_block.html</guid>
         
         
-        <category>jekyll</category>
+        <category>synth</category>
         
-        <category>rstats</category>
+      </item>
+    
+      <item>
+        <title>how much of RTI&#39;s coordinate approach should be followed?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/rti_coordinates&lt;/p&gt;
+
+&lt;p&gt;http://www.rti.org/pubs/mr-0010-0905-wheaton.pdf&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/rti/2016/02/14/rti_coordinates.html</link>
+        <guid isPermaLink="true">http://impunation.com/rti/2016/02/14/rti_coordinates.html</guid>
+        
+        
+        <category>rti</category>
+        
+      </item>
+    
+      <item>
+        <title>can verbeek pseudo-panel paper be implemented with CPS?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/replicate_verbeek&lt;/p&gt;
+
+&lt;p&gt;Pseudo panels and repeated cross-sections&lt;/p&gt;
+
+&lt;p&gt;http://tinyurl.com/gpcn9u2&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/pseudo-panel/2016/02/14/replicate_verbeek.html</link>
+        <guid isPermaLink="true">http://impunation.com/pseudo-panel/2016/02/14/replicate_verbeek.html</guid>
+        
+        
+        <category>pseudo-panel</category>
+        
+      </item>
+    
+      <item>
+        <title>can nagle dasymetric modeling paper be replicated with R?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/replicate_nagle&lt;/p&gt;
+
+&lt;p&gt;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4109831/&lt;/p&gt;
+
+&lt;p&gt;http://www.colorado.edu/geography/babs/webpage/publications/Accuracy2010_Leyk_etal.pdf&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/dasymetric/2016/02/14/replicate_nagle.html</link>
+        <guid isPermaLink="true">http://impunation.com/dasymetric/2016/02/14/replicate_nagle.html</guid>
+        
+        
+        <category>dasymetric</category>
+        
+      </item>
+    
+      <item>
+        <title>how should family relationships be imputed?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/relative_connections&lt;/p&gt;
+
+&lt;p&gt;impute mother, father, aunt, uncle, brother, sister, grandmother, grandfather IDs?  EVEN outside the household.  impute blood, adoptive, step-relatives.&lt;/p&gt;
+
+&lt;p&gt;figure out how to impute family connections..this probably has to be done before imputing individuals–&lt;/p&gt;
+
+&lt;p&gt;impute the full family’s structure, across housing units&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/family/2016/02/14/relative_connections.html</link>
+        <guid isPermaLink="true">http://impunation.com/family/2016/02/14/relative_connections.html</guid>
+        
+        
+        <category>family</category>
+        
+      </item>
+    
+      <item>
+        <title>what tables should a comprehensive database contain? </title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/relational_db_structure&lt;/p&gt;
+
+&lt;p&gt;tables with one record per..&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;housing unit&lt;/li&gt;
+  &lt;li&gt;family (including those outside the household)&lt;/li&gt;
+  &lt;li&gt;person&lt;/li&gt;
+  &lt;li&gt;firm&lt;/li&gt;
+  &lt;li&gt;government agency&lt;/li&gt;
+  &lt;li&gt;job&lt;/li&gt;
+  &lt;li&gt;school&lt;/li&gt;
+  &lt;li&gt;library&lt;/li&gt;
+  &lt;li&gt;hospital&lt;/li&gt;
+  &lt;li&gt;prison&lt;/li&gt;
+  &lt;li&gt;institution&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/structure/2016/02/14/relational_db_structure.html</link>
+        <guid isPermaLink="true">http://impunation.com/structure/2016/02/14/relational_db_structure.html</guid>
+        
+        
+        <category>structure</category>
+        
+      </item>
+    
+      <item>
+        <title>what should be assumed about migration within a locality at different points in time?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/migration_sipp&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/migration/2016/02/14/migration_sipp.html</link>
+        <guid isPermaLink="true">http://impunation.com/migration/2016/02/14/migration_sipp.html</guid>
+        
+        
+        <category>migration</category>
+        
+      </item>
+    
+      <item>
+        <title>what is the relationship btw census 2010 SF1 and NVSS birth data?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/birthdata_sf1&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/birth/2016/02/14/birthdata_sf1.html</link>
+        <guid isPermaLink="true">http://impunation.com/birth/2016/02/14/birthdata_sf1.html</guid>
+        
+        
+        <category>birth</category>
+        
+      </item>
+    
+      <item>
+        <title>what is the relationship between ACS 2010 and ACS 2011?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/acs_two_year&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/acs/2016/02/14/acs_two_year.html</link>
+        <guid isPermaLink="true">http://impunation.com/acs/2016/02/14/acs_two_year.html</guid>
+        
+        
+        <category>acs</category>
+        
+      </item>
+    
+      <item>
+        <title>what is the relationship btw census 2010 SF1 and ACS 2010?</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/impunation/acs_sf&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/acs/2016/02/14/acs_sf.html</link>
+        <guid isPermaLink="true">http://impunation.com/acs/2016/02/14/acs_sf.html</guid>
+        
+        
+        <category>acs</category>
         
       </item>
     
