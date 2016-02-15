@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what should be assumed about youth leaving a housing unit?"
-categories: [migration]
+categories: [human_migration]
 tags: []
 ---
 

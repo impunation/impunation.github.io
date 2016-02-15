@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "what should be assumed about migration within a locality at different points in time?"
-categories: [migration]
+categories: [human_migration]
 tags: []
 ---
 
