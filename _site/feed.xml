@@ -6,8 +6,8 @@
 </description>
     <link>http://impunation.com/</link>
     <atom:link href="http://impunation.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Feb 2016 20:17:38 -0500</pubDate>
-    <lastBuildDate>Sun, 14 Feb 2016 20:17:38 -0500</lastBuildDate>
+    <pubDate>Thu, 18 Feb 2016 13:45:38 -0500</pubDate>
+    <lastBuildDate>Thu, 18 Feb 2016 13:45:38 -0500</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -34,6 +34,26 @@
         <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://impunation.com/imputation/2016/02/14/synth_block.html</link>
         <guid isPermaLink="true">http://impunation.com/imputation/2016/02/14/synth_block.html</guid>
+        
+        
+        <category>imputation</category>
+        
+      </item>
+    
+      <item>
+        <title>unofficial simpop vignette</title>
+        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
+
+&lt;p&gt;write an unofficial, comprehensive simpop vignette.  discussed this with matthias templ 18/2/2016 and they would consider integrating it.&lt;/p&gt;
+
+&lt;p&gt;in order to understand and integrate this toolkit into the current questions:
+&lt;a href=&quot;https://cran.r-project.org/web/packages/simPop/simPop.pdf&quot;&gt;https://cran.r-project.org/web/packages/simPop/simPop.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;possibly look for a JSS submission&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://impunation.com/imputation/2016/02/14/simpop_vignette.html</link>
+        <guid isPermaLink="true">http://impunation.com/imputation/2016/02/14/simpop_vignette.html</guid>
         
         
         <category>imputation</category>
@@ -181,23 +201,6 @@ then create it again with every data set &lt;em&gt;except for one&lt;/em&gt; and
         
         
         <category>connections</category>
-        
-      </item>
-    
-      <item>
-        <title>how should locality real estate valuation open data inform nationwide parcels and prices?</title>
-        <description>&lt;h2 id=&quot;notes&quot;&gt;notes&lt;/h2&gt;
-
-&lt;p&gt;https://github.com/impunation/real_estate_integration&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://opendata.stackexchange.com/questions/2019/how-to-construct-a-database-with-the-underlying-real-estate-data-displayed-by-re&quot;&gt;http://opendata.stackexchange.com/questions/2019/how-to-construct-a-database-with-the-underlying-real-estate-data-displayed-by-re&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
-        <link>http://impunation.com/open_data/2016/02/14/real_estate_integration.html</link>
-        <guid isPermaLink="true">http://impunation.com/open_data/2016/02/14/real_estate_integration.html</guid>
-        
-        
-        <category>open_data</category>
         
       </item>
     
