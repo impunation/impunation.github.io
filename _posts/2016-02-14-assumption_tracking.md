@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "how should assumptions be tracked?"
-categories: [imputation]
+categories: [variance]
 tags: []
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "does sensitivity analysis show that imputed statistics closely align with survey results?"
-categories: [imputation]
+categories: [variance]
 tags: []
 ---
 

@@ -6,9 +6,9 @@
 </description>
     <link>http://impunation.com/</link>
     <atom:link href="http://impunation.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Feb 2016 13:45:38 -0500</pubDate>
-    <lastBuildDate>Thu, 18 Feb 2016 13:45:38 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.1</generator>
+    <pubDate>Tue, 08 Mar 2016 17:23:23 -0500</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 17:23:23 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>to the extent that they are public, how should open voter registration data be incorporated?</title>
@@ -70,11 +70,11 @@
 then create it again with every data set &lt;em&gt;except for one&lt;/em&gt; and show that it matches the data set that’s been excluded.&lt;/p&gt;
 </description>
         <pubDate>Sun, 14 Feb 2016 00:00:00 -0500</pubDate>
-        <link>http://impunation.com/imputation/2016/02/14/sensitivity.html</link>
-        <guid isPermaLink="true">http://impunation.com/imputation/2016/02/14/sensitivity.html</guid>
+        <link>http://impunation.com/variance/2016/02/14/sensitivity.html</link>
+        <guid isPermaLink="true">http://impunation.com/variance/2016/02/14/sensitivity.html</guid>
         
         
-        <category>imputation</category>
+        <category>variance</category>
         
       </item>
     
