@@ -13,3 +13,5 @@ in order to understand and integrate this toolkit into the current questions:
 [https://cran.r-project.org/web/packages/simPop/simPop.pdf](https://cran.r-project.org/web/packages/simPop/simPop.pdf)
 
 possibly look for a JSS submission
+
+consider also the synthpop package https://www.jstatsoft.org/article/view/v074i11
